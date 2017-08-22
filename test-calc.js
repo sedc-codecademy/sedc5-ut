@@ -1,16 +1,22 @@
-function test(first, second, op, result) {
-    var real = calculate(first, second, op);
-    if (real === result) {
-        console.log("OK");
+function test(name, first, second, op, expected) {
+    try {
+        var actual = calculate(first, second, op);
+    } catch (e){
+        console.warn(`NOT OK: (${name}) Exception occured: ${e}`);
+        return;
+    }
+    if (actual === expected) {
+        console.log(`OK: (${name}) `);
     } else {
-        console.log("NOT OK");
-
+        console.warn(`NOT OK: (${name}) Gotten ${actual}, expected ${expected}`);
     }
 }
 
-test(3, 5, "*", 15);
-test(2, 3, "+", 5);
-test(15, 5, "/", 3);
+test("multiply three with five",3, 5, "*", 15);
+test("add two and three",2, 3, "+", 5);
+test("divide fifteen with five",15, 5, "/", 3);
+test("invalid operation", 2, 3, "soberi", 0);
+test("subtract fifteen and five",15, 5, "-", 10);
 
 
 

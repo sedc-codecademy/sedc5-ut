@@ -1,5 +1,6 @@
 function calculate(first, second, op){
-    if ((op!== "+") && (op!=='*') && (op!== "-")){// && (op!== "/")) {
+    const validOperators = ["+","*", "/", "-"];
+    if (validOperators.indexOf(op)===-1) {
         return 0;
     }
 
