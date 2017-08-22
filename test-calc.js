@@ -18,6 +18,9 @@ test("divide fifteen with five",15, 5, "/", 3);
 test("invalid operation", 2, 3, "soberi", 0);
 test("subtract fifteen and five",15, 5, "-", 10);
 
+test("add point-one and point-two",0.1, 0.2, "+", 0.3);
+test("divide zero with zero", -3, 0, "/", Infinity);
+
 
 
 // // 1. Set up parameters

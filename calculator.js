@@ -1,8 +1,23 @@
-function calculate(first, second, op){
-    const validOperators = ["+","*", "/", "-"];
-    if (validOperators.indexOf(op)===-1) {
+function calculate(first, second, op) {
+    if ((second === 0) && (op === "/")) {
+        if (first !== 0) {
+            throw "Invalid arguments, cannot divide by zero"
+        }
+    }
+
+    const validOperators = ["+", "*", "/", "-"];
+    if (validOperators.indexOf(op) === -1) {
         return 0;
     }
 
-    return eval(`${first}${op}${second}`);
+    switch (op) {
+        case "+":
+            return first + second;
+        case "-":
+            return first - second;
+        case "*":
+            return first * second;
+        case "/":
+            return first / second;
+    }
 }
