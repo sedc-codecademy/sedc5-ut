@@ -12,6 +12,7 @@ QUnit.assert.isNaN = function(actual, message) {
     // todo: code the assertion
 }
 
+QUnit.module("Calculator tests");
 QUnit.test( "multiply three with five", function( assert ) {
     // 1. Arrange
     let first = 3;

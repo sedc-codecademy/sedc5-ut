@@ -69,10 +69,20 @@ describe("Number to words tests", function() {
         
     });
 
-    xit("verifies that numeric array input will return joined string output", function() {
+    it("verifies that numeric array input will return joined string output", function() {
         // 1. Arrange
         var input = [1, 2, 3];
         var expected = "one, two, three";
+        // 2. Act
+        var actual = numberToWords(input);
+        // 3. Assert
+        expect(actual).toEqual(expected);
+    });
+
+    it("verifies that numeric array or arrays input will return joined string output", function() {
+        // 1. Arrange
+        var input = [[1, 2, 3], [11, 22, 33], [111, 222, 333]];
+        var expected = 'one, two, three, eleven, twenty two, thirty three, one hundred eleven, two hundred twenty two, three hundred thirty three';
         // 2. Act
         var actual = numberToWords(input);
         // 3. Assert
@@ -203,6 +213,16 @@ describe("Number to words tests", function() {
         // 1. Arrange
         var input = 1000;
         var expected = "one thousand";
+        // 2. Act
+        var actual = numberToWords(input);
+        // 3. Assert
+        expect(actual).toEqual(expected);
+    });
+
+    it("verifies that numeric 10 input will return 'ten' as output", function() {
+        // 1. Arrange
+        var input = 10;
+        var expected = "ten";
         // 2. Act
         var actual = numberToWords(input);
         // 3. Assert

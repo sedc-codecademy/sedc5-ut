@@ -1,4 +1,10 @@
 function numberToWords(number) {
+    if (Array.isArray(number)){
+        return number.map(function(item){ 
+            return numberToWords(item);
+        }).join(", ");
+    }
+
     number = Number(number);
     if (!number) {
         return "";
