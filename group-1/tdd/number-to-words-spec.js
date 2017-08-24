@@ -169,5 +169,44 @@ describe("Number to words tests", function() {
         expect(actual).toEqual(expected);
     });
 
+    it("verifies that numeric 600 input will return 'six hundred' as output", function() {
+        // 1. Arrange
+        var input = 600;
+        var expected = "six hundred";
+        // 2. Act
+        var actual = numberToWords(input);
+        // 3. Assert
+        expect(actual).toEqual(expected);
+    });
+
+    it("verifies that numeric 105 input will return 'one hundred five' as output", function() {
+        // 1. Arrange
+        var input = 105;
+        var expected = "one hundred five";
+        // 2. Act
+        var actual = numberToWords(input);
+        // 3. Assert
+        expect(actual).toEqual(expected);
+    });
+
+    it("verifies that numeric 234 input will return 'two hundred thirty four' as output", function() {
+        // 1. Arrange
+        var input = 234;
+        var expected = "two hundred thirty four";
+        // 2. Act
+        var actual = numberToWords(input);
+        // 3. Assert
+        expect(actual).toEqual(expected);
+    });
+
+    it("verifies that numeric 1000 input will return 'one thousand' as output", function() {
+        // 1. Arrange
+        var input = 1000;
+        var expected = "one thousand";
+        // 2. Act
+        var actual = numberToWords(input);
+        // 3. Assert
+        expect(actual).toEqual(expected);
+    });
 
 });

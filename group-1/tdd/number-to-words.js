@@ -20,12 +20,33 @@ function numberToWords(number) {
         return teens[number - 10];
     }
 
-    var decade = Math.floor(number / 10);
-    var unit = number % 10;
-    if (unit === 0){
-        return decades[decade];
+    if (number < 100) {
+        var decade = Math.floor(number / 10);
+        var unit = number % 10;
+        if (unit === 0) {
+            return decades[decade];
+        }
+        return decades[decade] + " " + digits[unit];
     }
-    return decades[decade] + " " + digits[unit];
 
+    if (number < 1000) {
+        var hundreds = Math.floor(number / 100);
+        var rest = number % 100;
+
+        var restString = numberToWords(rest);
+        if (restString === "") {
+            return digits[hundreds] + " hundred";
+        }
+        return digits[hundreds] + " hundred " + restString;
+    }
+
+    var thousands = Math.floor(number / 1000);
+    var rest = number % 1000;
+
+    var restString = numberToWords(rest);
+    if (restString === "") {
+        return digits[thousands] + " thousand";
+    }
+    return digits[thousands] + " thousand " + restString;
 
 }
