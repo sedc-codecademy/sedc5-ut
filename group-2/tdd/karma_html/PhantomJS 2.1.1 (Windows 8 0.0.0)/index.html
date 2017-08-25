@@ -93,17 +93,20 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </style>
 </head>
 
-<body id="HTMLReporter" class="html-reporter">
+<body id="HTMLReporter" class="html-reporter showDetails">
 <h1>Tested in PhantomJS 2.1.1 (Windows 8 0.0.0) on Fri Aug 25 2017</h1>
 
 <div class="alert">
 
 
+<!-- <span class="failingAlert bar">Failed 1 specs</span> -->
+<span class="failingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
+  <a href="#" onclick="unfold();">Unfold</a></span>17 specs, 1 failed, 0 pending</span>
+<span class="resultsMenu bar">
+<a class="summaryMenuItem" onclick="showSummary();" href="#">Spec List<a>|<a 
+   class="detailsMenuItem" onclick="showFailures();" href="#">Failures</a>
+</span>
 
-  
-  <span class="passingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
-  <a href="#" onclick="unfold();">Unfold</a></span>5 specs, 0 failed, 0 pending</span>
-  
 
 
 </div>
@@ -142,12 +145,80 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       <span class="description">verifies that zero input results in zero output</span>
       </div>
     
+      <div class="specSummary passed">
+      <span class="description">verifies that 1 input results in one output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 7 input results in seven output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 4 input results in four output</span>
+      </div>
+    
+    </div>
+  
+    <div class="suite passed">
+      <span class="description">Number to words tests Double digits tests</span>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 26 input results in twenty six output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 10 input results in ten output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 20 input results in twenty output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 99 input results in ninety nine output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 12 input results in twelve output</span>
+      </div>
+    
+    </div>
+  
+    <div class="suite failed">
+      <span class="description">Number to words tests Multi digits tests</span>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 246 input results in two hundred forty six output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 100 input results in one hundred output</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">verifies that 999 input results in nine hundred ninety nine</span>
+      </div>
+    
+      <div class="specSummary failed">
+      <span class="description">verifies that 1234 input results in one thousand two hundred thirty four output</span>
+      </div>
+    
     </div>
   
   
 </div>
 
 <div id="details">
+  
+  
+  <div class="specDetail failed">
+    <span class="description">Number to words tests Multi digits tests verifies that 1234 input results in one thousand two hundred thirty four output</span>
+    <div class="stackTrace">
+      <div class="resultMessage">Expected 'undefined hundred thirty four' to equal 'one thousand two hundred thirty four'.
+http://localhost:9876/base/number-to-words-spec.js?c78bbd2bdca04b018ad0d25bb46108a0cbca25b8:173:35</div>
+    </div>
+  </div>
+  
   
 </div>
 
@@ -160,7 +231,7 @@ document.body.onkeypress = function (e) {
   switch (e.keyCode) {
     case 102: toggleFold(); break;
     case 49: showSummary(); break;
-    
+    case 50: showFailures(); break;
   }
 };
 
