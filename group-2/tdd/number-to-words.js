@@ -25,12 +25,23 @@ function numberToWords(number) {
         }
     }
 
-    var lastTwo = numberToWords(number % 100);
-    var hundreds = digits[Math.floor(number / 100)];
-    
-    if (lastTwo === "zero") {
-        return hundreds +" hundred";
-    } else {
-        return hundreds +" hundred " + lastTwo;
+    if (number < 1000) {
+        var lastTwo = numberToWords(number % 100);
+        var hundreds = digits[Math.floor(number / 100)];
+
+        if (lastTwo === "zero") {
+            return hundreds + " hundred";
+        } else {
+            return hundreds + " hundred " + lastTwo;
+        }
     }
+
+    var lastThree = numberToWords(number % 1000);
+    var thousands = numberToWords(Math.floor(number / 1000));
+    if (lastThree === "zero") {
+        return thousands + " thousand";
+    } else {
+        return thousands + " thousand " + lastThree;
+    }
+
 }

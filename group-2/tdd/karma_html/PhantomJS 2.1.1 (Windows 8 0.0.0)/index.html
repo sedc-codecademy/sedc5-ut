@@ -93,20 +93,17 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </style>
 </head>
 
-<body id="HTMLReporter" class="html-reporter showDetails">
+<body id="HTMLReporter" class="html-reporter">
 <h1>Tested in PhantomJS 2.1.1 (Windows 8 0.0.0) on Fri Aug 25 2017</h1>
 
 <div class="alert">
 
 
-<!-- <span class="failingAlert bar">Failed 3 specs</span> -->
-<span class="failingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
-  <a href="#" onclick="unfold();">Unfold</a></span>19 specs, 3 failed, 0 pending</span>
-<span class="resultsMenu bar">
-<a class="summaryMenuItem" onclick="showSummary();" href="#">Spec List<a>|<a 
-   class="detailsMenuItem" onclick="showFailures();" href="#">Failures</a>
-</span>
 
+  
+  <span class="passingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
+  <a href="#" onclick="unfold();">Unfold</a></span>19 specs, 0 failed, 0 pending</span>
+  
 
 
 </div>
@@ -184,7 +181,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
     
     </div>
   
-    <div class="suite failed">
+    <div class="suite passed">
       <span class="description">Number to words tests Multi digits tests</span>
     
       <div class="specSummary passed">
@@ -199,15 +196,15 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       <span class="description">verifies that 999 input results in nine hundred ninety nine</span>
       </div>
     
-      <div class="specSummary failed">
+      <div class="specSummary passed">
       <span class="description">verifies that 1234 input results in one thousand two hundred thirty four output</span>
       </div>
     
-      <div class="specSummary failed">
+      <div class="specSummary passed">
       <span class="description">verifies that 1000 input results in one thousand output</span>
       </div>
     
-      <div class="specSummary failed">
+      <div class="specSummary passed">
       <span class="description">verifies that 999999 input results in nine hundred ninety nine thousand nine hundred ninety nine output</span>
       </div>
     
@@ -217,32 +214,6 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </div>
 
 <div id="details">
-  
-  
-  <div class="specDetail failed">
-    <span class="description">Number to words tests Multi digits tests verifies that 1234 input results in one thousand two hundred thirty four output</span>
-    <div class="stackTrace">
-      <div class="resultMessage">Expected 'undefined hundred thirty four' to equal 'one thousand two hundred thirty four'.
-http://localhost:9876/base/number-to-words-spec.js?ace95932b34bdf1e97f6a0a4adcd18c56ef57fe6:173:35</div>
-    </div>
-  </div>
-  
-  <div class="specDetail failed">
-    <span class="description">Number to words tests Multi digits tests verifies that 1000 input results in one thousand output</span>
-    <div class="stackTrace">
-      <div class="resultMessage">Expected 'undefined hundred' to equal 'one thousand'.
-http://localhost:9876/base/number-to-words-spec.js?ace95932b34bdf1e97f6a0a4adcd18c56ef57fe6:183:35</div>
-    </div>
-  </div>
-  
-  <div class="specDetail failed">
-    <span class="description">Number to words tests Multi digits tests verifies that 999999 input results in nine hundred ninety nine thousand nine hundred ninety nine output</span>
-    <div class="stackTrace">
-      <div class="resultMessage">Expected 'undefined hundred ninety nine' to equal 'nine hundred ninety nine thousand nine hundred ninety nine'.
-http://localhost:9876/base/number-to-words-spec.js?ace95932b34bdf1e97f6a0a4adcd18c56ef57fe6:193:35</div>
-    </div>
-  </div>
-  
   
 </div>
 
@@ -255,7 +226,7 @@ document.body.onkeypress = function (e) {
   switch (e.keyCode) {
     case 102: toggleFold(); break;
     case 49: showSummary(); break;
-    case 50: showFailures(); break;
+    
   }
 };
 
