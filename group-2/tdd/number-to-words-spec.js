@@ -172,5 +172,26 @@ describe("Number to words tests", function () {
             // 3. Assert
             expect(actual).toEqual(expected);
         });
+
+        it("verifies that 1000 input results in one thousand output", function () {
+            // 1. Arrange
+            var input = 1000;
+            var expected = "one thousand";
+            // 2. Act
+            var actual = numberToWords(input);
+            // 3. Assert
+            expect(actual).toEqual(expected);
+        });
+
+        it("verifies that 999999 input results in nine hundred ninety nine thousand nine hundred ninety nine output", function () {
+            // 1. Arrange
+            var input = 999999;
+            var expected = "nine hundred ninety nine thousand nine hundred ninety nine";
+            // 2. Act
+            var actual = numberToWords(input);
+            // 3. Assert
+            expect(actual).toEqual(expected);
+        });
+
     });
 });

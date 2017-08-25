@@ -99,9 +99,9 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 <div class="alert">
 
 
-<!-- <span class="failingAlert bar">Failed 1 specs</span> -->
+<!-- <span class="failingAlert bar">Failed 3 specs</span> -->
 <span class="failingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
-  <a href="#" onclick="unfold();">Unfold</a></span>17 specs, 1 failed, 0 pending</span>
+  <a href="#" onclick="unfold();">Unfold</a></span>19 specs, 3 failed, 0 pending</span>
 <span class="resultsMenu bar">
 <a class="summaryMenuItem" onclick="showSummary();" href="#">Spec List<a>|<a 
    class="detailsMenuItem" onclick="showFailures();" href="#">Failures</a>
@@ -203,6 +203,14 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       <span class="description">verifies that 1234 input results in one thousand two hundred thirty four output</span>
       </div>
     
+      <div class="specSummary failed">
+      <span class="description">verifies that 1000 input results in one thousand output</span>
+      </div>
+    
+      <div class="specSummary failed">
+      <span class="description">verifies that 999999 input results in nine hundred ninety nine thousand nine hundred ninety nine output</span>
+      </div>
+    
     </div>
   
   
@@ -215,7 +223,23 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
     <span class="description">Number to words tests Multi digits tests verifies that 1234 input results in one thousand two hundred thirty four output</span>
     <div class="stackTrace">
       <div class="resultMessage">Expected 'undefined hundred thirty four' to equal 'one thousand two hundred thirty four'.
-http://localhost:9876/base/number-to-words-spec.js?c78bbd2bdca04b018ad0d25bb46108a0cbca25b8:173:35</div>
+http://localhost:9876/base/number-to-words-spec.js?ace95932b34bdf1e97f6a0a4adcd18c56ef57fe6:173:35</div>
+    </div>
+  </div>
+  
+  <div class="specDetail failed">
+    <span class="description">Number to words tests Multi digits tests verifies that 1000 input results in one thousand output</span>
+    <div class="stackTrace">
+      <div class="resultMessage">Expected 'undefined hundred' to equal 'one thousand'.
+http://localhost:9876/base/number-to-words-spec.js?ace95932b34bdf1e97f6a0a4adcd18c56ef57fe6:183:35</div>
+    </div>
+  </div>
+  
+  <div class="specDetail failed">
+    <span class="description">Number to words tests Multi digits tests verifies that 999999 input results in nine hundred ninety nine thousand nine hundred ninety nine output</span>
+    <div class="stackTrace">
+      <div class="resultMessage">Expected 'undefined hundred ninety nine' to equal 'nine hundred ninety nine thousand nine hundred ninety nine'.
+http://localhost:9876/base/number-to-words-spec.js?ace95932b34bdf1e97f6a0a4adcd18c56ef57fe6:193:35</div>
     </div>
   </div>
   
