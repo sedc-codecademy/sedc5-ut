@@ -8,7 +8,7 @@ namespace Calculator
 {
     public class CalculatorEngine
     {
-        public int Calculate(int first, int second, string op)
+        public int Calculate(double first, double second, string op)
         {
             if ((second == 0) && (op == "/"))
             {
